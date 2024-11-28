@@ -1,7 +1,6 @@
 """Module containing code for plotting inflammation data."""
 
 from matplotlib import pyplot as plt
-import numpy as np
 
 
 def visualize(data_dict):
@@ -19,6 +18,20 @@ def visualize(data_dict):
 
         axes.set_ylabel(name)
         axes.plot(data)
+
+        # Add grid lines
+        axes.grid(True)
+
+        # Add title
+        axes.set_title(name)
+
+        # Add x and y axis labels
+        axes.set_xlabel('X')
+        axes.set_ylabel('Y')
+
+        # Customize tick labels
+        axes.tick_params(axis='x', rotation=0)
+        axes.tick_params(axis='y', rotation=0)
 
     fig.tight_layout()
 
