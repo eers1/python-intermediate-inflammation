@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-def visualize(data_dict):
+def visualize(data_dict, savename):
     """Display plots of basic statistical properties of the inflammation data.
 
     :param data_dict: Dictionary of name -> data to plot
@@ -21,7 +21,7 @@ def visualize(data_dict):
         axes.plot(data)
 
     fig.tight_layout()
-
+    fig.savefig(savename)
     plt.show()
 
 
@@ -30,4 +30,4 @@ def plot_std_data(daily_standard_deviation):
     graph_data = {
         'standard deviation by day': daily_standard_deviation,
     }
-    visualize(graph_data)
+    visualize(graph_data, "std.png")
