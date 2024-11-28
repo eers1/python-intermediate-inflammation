@@ -23,3 +23,11 @@ def visualize(data_dict):
     fig.tight_layout()
 
     plt.show()
+
+
+def plot_std_data(daily_standard_deviation):
+    """Plots the standard deviation by day between datasets."""
+    graph_data = {
+        'standard deviation by day': daily_standard_deviation,
+    }
+    visualize(graph_data)
